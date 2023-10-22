@@ -7,16 +7,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'augustkang',
-  tagline: 'Cloud enthusiast',
-  favicon: 'img/favicon.ico',
-
+  tagline: 'augustkang',
   url: 'https://augustkang.com',
   baseUrl: '/',
-  organizationName: 'augustkang', // Usually your GitHub org/user name.
-  projectName: 'augustkang.github.io', // Usually your repo name.
   trailingSlash: false,
-
-  onBrokenLinks: 'throw',
+  favicon: 'img/favicon.ico',
+  organizationName: 'augustkang',
+  projectName: 'augustkang.github.io',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -32,17 +30,17 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false,
-        blog: {
-          blogSidebarTitle: 'Posts',
-          blogSidebarCount: 'ALL',
-          postsPerPage: 10,
-
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          showReadingTime: false,
+          sidebarCollapsed: true,
         },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        googleAnalytics: {
+          trackingID: 'G-KQH8MPENXW',
         },
       }),
     ],
@@ -51,21 +49,43 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      metadata: [
+        {
+          name: 'keywords',
+          content: 'augustkang, blog, devops, sre, cloud'
+        },
+      ],
+      colorMode: {
+        disableSwitch: true,
+        defaultMode: 'dark',
+        respectPrefersColorScheme: true,
+      },
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+      image: 'img/august.png',
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
         title: 'augustkang',
+        logo: {
+          src: 'img/august.png',
+        },
         items: [
           {
-            href: 'https://github.com/augustkang',
+            href: 'https://github.com/augustkang.github.io',
             label: 'GitHub',
             position: 'right',
           },
           {
-            href: 'https://www.linkedin.com/in/augustkang/',
+            href: 'https://linkedin.com/in/augustkang',
             label: 'LinkedIn',
             position: 'right',
-          }
+          },
+
         ],
       },
       footer: {
@@ -75,10 +95,6 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-      },
-      colorMode: {
-        defaultMode: 'dark',
-        respectPrefersColorScheme: true,
       },
     }),
 };
