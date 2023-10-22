@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'augustkang',
-  tagline: 'augustkang',
+  tagline: "You don't have to be great to start, but you have to start to be great.",
   url: 'https://augustkang.com',
   baseUrl: '/',
   trailingSlash: false,
@@ -17,9 +17,6 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -33,6 +30,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
+          showLastUpdateTime: true,
           sidebarCollapsed: true,
         },
         blog: false,
@@ -41,6 +39,10 @@ const config = {
         },
         googleAnalytics: {
           trackingID: 'G-KQH8MPENXW',
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
         },
       }),
     ],
