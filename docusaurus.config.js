@@ -73,12 +73,9 @@ const config = {
       },
       navbar: {
         title: 'augustkang',
-        logo: {
-          src: 'img/august.png',
-        },
         items: [
           {
-            href: 'https://github.com/augustkang.github.io',
+            href: 'https://github.com/augustkang',
             label: 'GitHub',
             position: 'right',
           },
