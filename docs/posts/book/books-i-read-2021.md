@@ -2,7 +2,7 @@
 title: "2021 Books I Read"
 ---
 
-# 2021년에 읽은 책들
+## 2021년에 읽은 책들
 
 * 2021-01-04 [페스트(알베르 카뮈)](http://augustkang.com/posts/book/pest/)
 * 2021-01-08 [너라는 생활(김혜진)](http://augustkang.com/posts/book/너라는생활/)
